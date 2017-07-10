@@ -3,6 +3,8 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
+	$(".js-back").hide();// hide oculta la clase js-back(Flecha)
+
 });
 
 
@@ -42,5 +44,12 @@ function renderActivity(recipe) {
 	
 }
 
+function printNews(){
+	var parrafo = document.getElementsByClassName("parrafo")[0];
+	var texto = document.createTextNode("NUEVAS RECETAS");
 
-$(".js-back").hide();// hide oculta la clase js-back(Flecha)
+	parrafo.appendChild(texto);
+}
+
+printNews()
+
