@@ -4,7 +4,6 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 
 	$(".js-back").hide();// hide oculta la clase js-back(Flecha)
-
 });
 
 
@@ -12,9 +11,15 @@ $(document).ready( function(){
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
-function renderHighlightedRecipes(recipesArray) {
+function renderHighlightedRecipes(recipesArray) {	
+	recipesArray.forEach(function(e){ // recorre el arreglo, validando si highlighted es true, si esto es verdadero, se dirige a la siguente funcion renderRecipe//
+		if(e.highlighted == true){
+			renderRecipe(e)
+		}
+	});
 	console.log('Recipes: ', recipesArray);
 }
+
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
@@ -43,6 +48,8 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
+
+
 
 function printNews(){
 	var parrafo = document.getElementsByClassName("parrafo")[0];
