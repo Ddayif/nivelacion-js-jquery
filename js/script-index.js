@@ -43,3 +43,4 @@ function renderActivity(recipe) {
 }
 
 
+$(".js-back").hide();// hide oculta la clase js-back(Flecha)
