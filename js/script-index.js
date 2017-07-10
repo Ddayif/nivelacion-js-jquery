@@ -2,6 +2,8 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	
+	renderActivities(activitiesArray);
 
 	$(".js-back").hide();// hide oculta la clase js-back(Flecha)
 });
@@ -42,8 +44,15 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+	activitiesArray.forEach(function(e){
+		console.log(e)
+	});
+	if(activitiesArray.length > 0){
+		$(".wrapper-message").hide();
+		console.log('Activities: ', activitiesArray);
+	}
 }
+
 
 /*
 * Función que se encarga de pintar una actividad
